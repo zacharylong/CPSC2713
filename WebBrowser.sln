@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebBrowser.UI", "WebBrowser.UI\WebBrowser.UI.csproj", "{C6CE95CF-7DC7-4BFE-A499-EBB8D8EF3092}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebBrowser.Logic", "WebBrowser.Logic\WebBrowser.Logic.csproj", "{3B1797C2-FAE8-46B7-BC54-4EB704E1F605}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BE1250D1-D7A9-4F8A-A8A7-DBB8210D3BE1} = {BE1250D1-D7A9-4F8A-A8A7-DBB8210D3BE1}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebBrowser.Data", "WebBrowser.Data\WebBrowser.Data.csproj", "{BE1250D1-D7A9-4F8A-A8A7-DBB8210D3BE1}"
 EndProject
