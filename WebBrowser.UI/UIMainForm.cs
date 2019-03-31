@@ -21,5 +21,14 @@ namespace WebBrowser.UI
         {
             this.Close();
         }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("This is the web browser project for CPSC 2713"
+                + "\nWritten by Zachary Long zzl0100"
+                + "\n\nI hope it works!"
+                
+                );
+        }
     }
 }
