@@ -17,6 +17,11 @@ namespace WebBrowser.UI
             InitializeComponent();
         }
 
+        // Reference for this project:
+        // https://docs.microsoft.com/en-us/dotnet/framework/winforms/controls/how-to-add-web-browser-capabilities-to-a-windows-forms-application
+
+
+
         private void exitWebBrowserToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -29,6 +34,54 @@ namespace WebBrowser.UI
                 + "\n\nI hope it works!"
                 
                 );
+        }
+
+
+
+        private void addressTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                Navigate(addressTextBox.Text);
+            }
+        }
+
+        //https://docs.microsoft.com/en-us/dotnte/api/system.windows.forms.webbrowser?view=netframework-4.7.2
+
+        private void goButton_Click(object sender, EventArgs e)
+        {
+            //clicking this button will perform the same behavior as when you press the Enter key
+            //load the new address in the web browser
+            Navigate(addressTextBox.Text);
+        }
+
+        private void Navigate(String address)
+        {
+            if (String.IsNullOrEmpty(address)) return;
+            if (address.Equals("about:blank")) return;
+            if (!address.StartsWith("http://") &&
+                    !address.StartsWith("https://")) {
+                address = "http://" + address;
+            }
+            try
+            {
+                webBrowser1.Navigate(new Uri(address));
+            }
+            catch (System.UriFormatException)
+            {
+                return;
+            }
+        }
+
+        private void webBrowser1_Navigated(object sender,
+            WebBrowserNavigatedEventArgs e)
+        {
+            addressTextBox.Text = webBrowser1.Url.ToString();
+        }
+
+        private void addressTextBox_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }
