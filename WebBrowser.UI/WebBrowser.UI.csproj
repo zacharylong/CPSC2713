@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BrowserUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BrowserUserControl.Designer.cs">
+      <DependentUpon>BrowserUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UIMainForm.cs">
@@ -54,6 +60,9 @@
     <Compile Include="UIMainForm.Designer.cs">
       <DependentUpon>UIMainForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="BrowserUserControl.resx">
+      <DependentUpon>BrowserUserControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
