@@ -42,8 +42,7 @@ namespace WebBrowser.UI
         {
             if (e.KeyCode == Keys.Enter)
             {
-                var accessAddressBox = new BrowserUserControl();
-                Navigate(accessAddressBox.addressTextBox.Text);
+                Navigate(addressTextBox.Text);
             }
         }
 
@@ -53,8 +52,7 @@ namespace WebBrowser.UI
         {
             //clicking this button will perform the same behavior as when you press the Enter key
             //load the new address in the web browser
-            var goButtonAccess = new BrowserUserControl();
-            Navigate(goButtonAccess.addressTextBox.Text);
+            Navigate(addressTextBox.Text);
         }
 
         private void Navigate(String address)
@@ -78,8 +76,7 @@ namespace WebBrowser.UI
         private void webBrowser1_Navigated(object sender,
             WebBrowserNavigatedEventArgs e)
         {
-            var navigatedAccess = new BrowserUserControl();
-            navigatedAccess.addressTextBox.Text = webBrowser1.Url.ToString();
+            addressTextBox.Text = webBrowser1.Url.ToString();
         }
 
         private void addressTextBox_Click(object sender, EventArgs e)
