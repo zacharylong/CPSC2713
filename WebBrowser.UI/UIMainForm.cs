@@ -67,7 +67,6 @@ namespace WebBrowser.UI
             }
             try
             {
-                
                 webBrowser1.Navigate(new Uri(address));
             }
             catch (System.UriFormatException)
