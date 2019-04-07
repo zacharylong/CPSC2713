@@ -65,6 +65,7 @@
             this.backButton.Name = "backButton";
             this.backButton.Size = new System.Drawing.Size(23, 22);
             this.backButton.Text = "backButton";
+            this.backButton.Click += new System.EventHandler(this.backButton_Click_1);
             // 
             // forwardButton
             // 
@@ -118,11 +119,12 @@
             // 
             // webBrowser1
             // 
-            this.webBrowser1.Location = new System.Drawing.Point(-5, 28);
+            this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webBrowser1.Location = new System.Drawing.Point(0, 25);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
             this.webBrowser1.ScriptErrorsSuppressed = true;
-            this.webBrowser1.Size = new System.Drawing.Size(493, 241);
+            this.webBrowser1.Size = new System.Drawing.Size(491, 247);
             this.webBrowser1.TabIndex = 6;
             // 
             // BrowserUserControl

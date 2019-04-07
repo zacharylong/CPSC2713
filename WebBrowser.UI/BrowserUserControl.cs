@@ -154,7 +154,28 @@ namespace WebBrowser.UI
 
         }
 
+        private void backButton_Click_1(object sender, EventArgs e)
+        {
 
+        }
 
+        private void Navigate (String address)
+        {
+            if (String.IsNullOrEmpty(address)) return;
+            if (address.Equals("about:blank")) return;
+            if (!address.StartsWith("http://") && 
+                !address.StartsWith("https://"))
+            {
+                address = "http://" + address;
+            }
+            try
+            {
+                webBrowser1.Navigate(new Uri(address));
+            }
+            catch (System.UriFormatException)
+            {
+                return;
+            }
+        }
     }
 }
