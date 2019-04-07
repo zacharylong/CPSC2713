@@ -74,8 +74,9 @@ namespace WebBrowser.UI
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(179, 22);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItem2.Text = "New Tab";
+            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
             // closeCurrentTabToolStripMenuItem
             // 
@@ -155,6 +156,7 @@ namespace WebBrowser.UI
             this.ClientSize = new System.Drawing.Size(694, 538);
             this.Controls.Add(this.browserUserControl1);
             this.Controls.Add(this.menuStrip1);
+            this.KeyPreview = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "UIMainForm";
             this.Text = "UIMainForm";
