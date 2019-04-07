@@ -32,33 +32,72 @@ namespace WebBrowser.UI
             MessageBox.Show("This is the web browser project for CPSC 2713"
                 + "\nWritten by Zachary Long zzl0100"
                 + "\n\nI hope it works!"
-                
+
                 );
         }
 
         private void toolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            var tabAdd = new BrowserUserControl();
-            tabAdd.tabControl1.TabPages.Add(new TabPage("New Tab"));
+            addNewTab();
+
+            //tb.Controls.Add(buc);
+            //var tabAdd = new BrowserUserControl();
+            //tabAdd.tabControl1.TabPages.Add(new TabPage("New Tab"));
         }
 
         private void BrowserUserControl_KeyDown(object sender, KeyEventArgs e)
         {
-            var keyAccess = new BrowserUserControl();
+            //var keyAccess = new BrowserUserControl();
 
             if (e.Control && (e.KeyCode == Keys.T))
             {
 
-                keyAccess.tabControl1.TabPages.Add(new TabPage("new Tab"));
+                this.tabControl1.TabPages.Add(new TabPage("new Tab"));
             }
 
             if (e.Control && (e.KeyCode == Keys.W))
-                keyAccess.tabControl1.TabPages.RemoveAt(keyAccess.tabControl1.SelectedIndex);
+                this.tabControl1.TabPages.RemoveAt(this.tabControl1.SelectedIndex);
         }
 
         private void browserUserControl1_Load(object sender, EventArgs e)
         {
 
         }
+
+        private void closeCurrentTabToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //close currently selected tab
+            //var closeTab = new BrowserUserControl();
+
+            //this.tabControl1.TabPages.RemoveAt(this.Focused);
+        }
+
+        private void addressTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void UIMainFormControl_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            if (e.Control && (e.KeyCode == Keys.T))
+            {
+
+                this.tabControl1.TabPages.Add(new TabPage("new Tab"));
+            }
+
+            if (e.Control && (e.KeyCode == Keys.W))
+                this.tabControl1.TabPages.RemoveAt(this.tabControl1.SelectedIndex);
+        }
+
+        public void addNewTab()
+        {
+            BrowserUserControl browserControl = new BrowserUserControl();
+            browserControl.Dock = DockStyle.Fill;
+            TabPage myTabPage = new TabPage();
+            myTabPage.Controls.Add(browserControl);
+            this.tabControl1.TabPages.Add(myTabPage);
+        }
     }
 }
+
