@@ -60,6 +60,9 @@
     <Compile Include="UIMainForm.Designer.cs">
       <DependentUpon>UIMainForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="BrowserUserControl.resx">
+      <DependentUpon>BrowserUserControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
