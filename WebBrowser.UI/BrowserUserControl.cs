@@ -18,6 +18,7 @@ namespace WebBrowser.UI
             InitializeComponent();
             Url = "http://www.auburn.edu";
             myBrowser();
+
         }
 
         private void webBrowser1_Load(object sender, EventArgs e)
@@ -82,8 +83,8 @@ namespace WebBrowser.UI
         private void webBrowser1_Navigated(object sender,
             WebBrowserNavigatedEventArgs e)
         {
-            // addressTextBox.Text = webBrowser1.Url.ToString();
-            addressTextBox.Text = Url;
+            addressTextBox.Text = webBrowser1.Url.ToString();
+            //addressTextBox.Text = Url;
         }
 
         private void addressTextBox_Click(object sender, EventArgs e)
@@ -156,7 +157,7 @@ namespace WebBrowser.UI
 
         private void backButton_Click_1(object sender, EventArgs e)
         {
-
+            webBrowser1.GoBack();
         }
 
         private void Navigate (String address)
@@ -176,6 +177,11 @@ namespace WebBrowser.UI
             {
                 return;
             }
+        }
+
+        private void goButton_Click(object sender, EventArgs e)
+        {
+            Navigate(addressTextBox.Text);
         }
     }
 }

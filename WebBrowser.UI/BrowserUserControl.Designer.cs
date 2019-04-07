@@ -107,6 +107,7 @@
             this.goButton.Name = "goButton";
             this.goButton.Size = new System.Drawing.Size(23, 22);
             this.goButton.Text = "goButton";
+            this.goButton.Click += new System.EventHandler(this.goButton_Click);
             // 
             // bookmarkButton
             // 
@@ -119,12 +120,11 @@
             // 
             // webBrowser1
             // 
-            this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.webBrowser1.Location = new System.Drawing.Point(0, 25);
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser1.Location = new System.Drawing.Point(-5, 28);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(500, 200);
             this.webBrowser1.Name = "webBrowser1";
             this.webBrowser1.ScriptErrorsSuppressed = true;
-            this.webBrowser1.Size = new System.Drawing.Size(491, 247);
+            this.webBrowser1.Size = new System.Drawing.Size(500, 368);
             this.webBrowser1.TabIndex = 6;
             // 
             // BrowserUserControl
