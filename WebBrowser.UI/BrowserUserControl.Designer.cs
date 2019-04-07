@@ -67,12 +67,11 @@
             // 
             // webBrowser1
             // 
-            this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.webBrowser1.Location = new System.Drawing.Point(3, 3);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
             this.webBrowser1.ScriptErrorsSuppressed = true;
-            this.webBrowser1.Size = new System.Drawing.Size(476, 232);
+            this.webBrowser1.Size = new System.Drawing.Size(500, 232);
             this.webBrowser1.TabIndex = 0;
             this.webBrowser1.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.webBrowser1_DocumentCompleted);
             // 
@@ -136,9 +135,8 @@
             // 
             this.addressTextBox.Name = "addressTextBox";
             this.addressTextBox.Size = new System.Drawing.Size(300, 25);
+            this.addressTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.addressTextBox_KeyDown);
             this.addressTextBox.Click += new System.EventHandler(this.addressTextBox_Click_1);
-            this.addressTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(addressTextBox_KeyDown);
-            //added line above to handle enter key
             // 
             // goButton
             // 
