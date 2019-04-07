@@ -147,15 +147,19 @@ namespace WebBrowser.UI
 
         }
 
-        private void UIMainForm_KeyDown(object sender, KeyEventArgs e)
+        private void BrowserUserControl_KeyDown(object sender, KeyEventArgs e)
         {
+            //var keyAccess = new BrowserUserControl();
+
             if (e.Control && (e.KeyCode == Keys.T))
             {
+
                 this.tabControl1.TabPages.Add(new TabPage("new Tab"));
             }
 
             if (e.Control && (e.KeyCode == Keys.W))
                 this.tabControl1.TabPages.RemoveAt(this.tabControl1.SelectedIndex);
         }
+
     }
 }

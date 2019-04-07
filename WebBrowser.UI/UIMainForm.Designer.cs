@@ -147,6 +147,7 @@ namespace WebBrowser.UI
             this.browserUserControl1.Name = "browserUserControl1";
             this.browserUserControl1.Size = new System.Drawing.Size(694, 514);
             this.browserUserControl1.TabIndex = 1;
+            this.browserUserControl1.Load += new System.EventHandler(this.browserUserControl1_Load);
             // 
             // UIMainForm
             // 

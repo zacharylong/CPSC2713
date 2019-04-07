@@ -38,9 +38,27 @@ namespace WebBrowser.UI
 
         private void toolStripMenuItem2_Click(object sender, EventArgs e)
         {
-
+            var tabAdd = new BrowserUserControl();
+            tabAdd.tabControl1.TabPages.Add(new TabPage("New Tab"));
         }
 
-       
+        private void BrowserUserControl_KeyDown(object sender, KeyEventArgs e)
+        {
+            var keyAccess = new BrowserUserControl();
+
+            if (e.Control && (e.KeyCode == Keys.T))
+            {
+
+                keyAccess.tabControl1.TabPages.Add(new TabPage("new Tab"));
+            }
+
+            if (e.Control && (e.KeyCode == Keys.W))
+                keyAccess.tabControl1.TabPages.RemoveAt(keyAccess.tabControl1.SelectedIndex);
+        }
+
+        private void browserUserControl1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
