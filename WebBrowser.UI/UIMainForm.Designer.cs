@@ -212,7 +212,7 @@ namespace WebBrowser.UI
         private System.Windows.Forms.ToolStripMenuItem manageBookmarksToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         public TabControl tabControl1;
-        private TabPage tabPage1;
         private BrowserUserControl browserUserControl1;
+        public TabPage tabPage1;
     }
 }

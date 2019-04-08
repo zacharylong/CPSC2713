@@ -70,6 +70,8 @@ namespace WebBrowser.UI
             //var closeTab = new BrowserUserControl();
 
             //this.tabControl1.TabPages.RemoveAt(this.Focused);
+
+            this.tabControl1.TabPages.RemoveAt(this.tabControl1.SelectedIndex);
         }
 
         //private void addressTextBox_KeyDown(object sender, KeyEventArgs e)
@@ -83,7 +85,7 @@ namespace WebBrowser.UI
             if (e.Control && (e.KeyCode == Keys.T))
             {
 
-                this.tabControl1.TabPages.Add(new TabPage("new Tab"));
+                this.tabControl1.TabPages.Add(new TabPage("New Tab"));
             }
 
             if (e.Control && (e.KeyCode == Keys.W))
@@ -94,7 +96,7 @@ namespace WebBrowser.UI
         {
             BrowserUserControl browserControl = new BrowserUserControl();
             browserControl.Dock = DockStyle.Fill;
-            TabPage myTabPage = new TabPage();
+            TabPage myTabPage = new TabPage("New Tab");
             myTabPage.Controls.Add(browserControl);
             this.tabControl1.TabPages.Add(myTabPage);
         }
