@@ -150,7 +150,7 @@ namespace WebBrowser.UI
             this.tabControl1.Location = new System.Drawing.Point(0, 27);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(490, 264);
+            this.tabControl1.Size = new System.Drawing.Size(638, 264);
             this.tabControl1.TabIndex = 5;
             // 
             // tabPage1
@@ -159,16 +159,16 @@ namespace WebBrowser.UI
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(482, 238);
+            this.tabPage1.Size = new System.Drawing.Size(630, 238);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // browserUserControl1
             // 
-            this.browserUserControl1.Location = new System.Drawing.Point(0, 6);
+            this.browserUserControl1.Location = new System.Drawing.Point(3, 6);
             this.browserUserControl1.Name = "browserUserControl1";
-            this.browserUserControl1.Size = new System.Drawing.Size(621, 300);
+            this.browserUserControl1.Size = new System.Drawing.Size(621, 309);
             this.browserUserControl1.TabIndex = 0;
             // 
             // UIMainForm
@@ -212,7 +212,7 @@ namespace WebBrowser.UI
         private System.Windows.Forms.ToolStripMenuItem manageBookmarksToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         public TabControl tabControl1;
-        private BrowserUserControl browserUserControl1;
         public TabPage tabPage1;
+        private BrowserUserControl browserUserControl1;
     }
 }

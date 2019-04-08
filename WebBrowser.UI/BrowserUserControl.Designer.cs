@@ -121,11 +121,12 @@
             // 
             // webBrowser1
             // 
-            this.webBrowser1.Location = new System.Drawing.Point(-25, 118);
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(500, 200);
+            this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webBrowser1.Location = new System.Drawing.Point(0, 25);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(800, 500);
             this.webBrowser1.Name = "webBrowser1";
             this.webBrowser1.ScriptErrorsSuppressed = true;
-            this.webBrowser1.Size = new System.Drawing.Size(646, 368);
+            this.webBrowser1.Size = new System.Drawing.Size(800, 500);
             this.webBrowser1.TabIndex = 6;
             // 
             // BrowserUserControl
@@ -136,7 +137,7 @@
             this.Controls.Add(this.webBrowser1);
             this.Controls.Add(this.toolStrip1);
             this.Name = "BrowserUserControl";
-            this.Size = new System.Drawing.Size(684, 489);
+            this.Size = new System.Drawing.Size(684, 272);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
