@@ -123,10 +123,10 @@
             // 
             this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.webBrowser1.Location = new System.Drawing.Point(0, 25);
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(800, 500);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(800, 800);
             this.webBrowser1.Name = "webBrowser1";
             this.webBrowser1.ScriptErrorsSuppressed = true;
-            this.webBrowser1.Size = new System.Drawing.Size(800, 500);
+            this.webBrowser1.Size = new System.Drawing.Size(800, 800);
             this.webBrowser1.TabIndex = 6;
             // 
             // BrowserUserControl
