@@ -53,7 +53,7 @@
             this.bookmarkButton});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(491, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(684, 25);
             this.toolStrip1.TabIndex = 5;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -121,21 +121,22 @@
             // 
             // webBrowser1
             // 
-            this.webBrowser1.Location = new System.Drawing.Point(-5, 28);
+            this.webBrowser1.Location = new System.Drawing.Point(-25, 118);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(500, 200);
             this.webBrowser1.Name = "webBrowser1";
             this.webBrowser1.ScriptErrorsSuppressed = true;
-            this.webBrowser1.Size = new System.Drawing.Size(500, 368);
+            this.webBrowser1.Size = new System.Drawing.Size(646, 368);
             this.webBrowser1.TabIndex = 6;
             // 
             // BrowserUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.Controls.Add(this.webBrowser1);
             this.Controls.Add(this.toolStrip1);
             this.Name = "BrowserUserControl";
-            this.Size = new System.Drawing.Size(491, 272);
+            this.Size = new System.Drawing.Size(684, 489);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);

@@ -120,13 +120,13 @@ namespace WebBrowser.UI
             // manageHistoryToolStripMenuItem
             // 
             this.manageHistoryToolStripMenuItem.Name = "manageHistoryToolStripMenuItem";
-            this.manageHistoryToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.manageHistoryToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.manageHistoryToolStripMenuItem.Text = "Manage History";
             // 
             // manageBookmarksToolStripMenuItem
             // 
             this.manageBookmarksToolStripMenuItem.Name = "manageBookmarksToolStripMenuItem";
-            this.manageBookmarksToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.manageBookmarksToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.manageBookmarksToolStripMenuItem.Text = "Manage Bookmarks";
             // 
             // helpToolStripMenuItem
@@ -168,7 +168,7 @@ namespace WebBrowser.UI
             // 
             this.browserUserControl1.Location = new System.Drawing.Point(0, 6);
             this.browserUserControl1.Name = "browserUserControl1";
-            this.browserUserControl1.Size = new System.Drawing.Size(482, 300);
+            this.browserUserControl1.Size = new System.Drawing.Size(621, 300);
             this.browserUserControl1.TabIndex = 0;
             // 
             // UIMainForm
