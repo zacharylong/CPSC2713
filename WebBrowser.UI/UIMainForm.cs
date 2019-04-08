@@ -72,10 +72,10 @@ namespace WebBrowser.UI
             //this.tabControl1.TabPages.RemoveAt(this.Focused);
         }
 
-        private void addressTextBox_KeyDown(object sender, KeyEventArgs e)
-        {
+        //private void addressTextBox_KeyDown(object sender, KeyEventArgs e)
+        //{
 
-        }
+        //}
 
         private void UIMainFormControl_KeyDown(object sender, KeyEventArgs e)
         {

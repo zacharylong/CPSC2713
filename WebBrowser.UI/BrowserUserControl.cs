@@ -18,8 +18,46 @@ namespace WebBrowser.UI
             InitializeComponent();
             Url = "http://www.auburn.edu";
             myBrowser();
-
+            webBrowser1.CanGoBackChanged +=
+                new EventHandler(webBrowser1_CanGoBackChanged);
+            webBrowser1.CanGoForwardChanged +=
+                new EventHandler(webBrowser1_CanGoForwardChanged);
+            webBrowser1.DocumentTitleChanged +=
+                new EventHandler(webBrowser1_DocumentTitleChanged);
+            webBrowser1.StatusTextChanged +=
+                new EventHandler(webBrowser1_StatusTextChanged);
         }
+
+        private void addressTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                Navigate(addressTextBox.Text);
+            }
+        }
+
+        private void webBrowser1_Navigated(object sender, 
+            WebBrowserNavigatedEventArgs e)
+        {
+            addressTextBox.Text = webBrowser1.Url.ToString();
+        }
+
+        private void webBrowser1_CanGoBackChanged(object sender, EventArgs e)
+        {
+            backButton.Enabled = webBrowser1.CanGoBack;
+        }
+
+        private void webBrowser1_CanGoForwardChanged(object sender, EventArgs e)
+        {
+            forwardButton.Enabled = webBrowser1.CanGoForward;
+        }
+
+        private void webBrowser1_DocumentTitleChanged(object sender, EventArgs e)
+        {
+            this.Text = webBrowser1.DocumentTitle;
+        }
+
+
 
         private void webBrowser1_Load(object sender, EventArgs e)
         {
@@ -38,15 +76,15 @@ namespace WebBrowser.UI
             //webBrowser1.DocumentCompleted += new WebBrowserDocumentCompletedEventHandler(webpage_DocumentCompleted);
         }
 
-        private void addressTextBox_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                //webBrowser1.Navigate(addressTextBox.Text);
-                //Navigate(addressTextBox.Text);
-                goButton_Click_1(null, null);
-            }
-        }
+        //private void addressTextBox_KeyDown(object sender, KeyEventArgs e)
+        //{
+        //    if (e.KeyCode == Keys.Enter)
+        //    {
+        //        //webBrowser1.Navigate(addressTextBox.Text);
+        //        //Navigate(addressTextBox.Text);
+        //        goButton_Click_1(null, null);
+        //    }
+        //}
 
         //https://docs.microsoft.com/en-us/dotnte/api/system.windows.forms.webbrowser?view=netframework-4.7.2
 
@@ -80,12 +118,12 @@ namespace WebBrowser.UI
         //    }
         //}
 
-        private void webBrowser1_Navigated(object sender,
-            WebBrowserNavigatedEventArgs e)
-        {
-            addressTextBox.Text = webBrowser1.Url.ToString();
-            //addressTextBox.Text = Url;
-        }
+        //private void webBrowser1_Navigated(object sender,
+        //    WebBrowserNavigatedEventArgs e)
+        //{
+        //    addressTextBox.Text = webBrowser1.Url.ToString();
+        //    //addressTextBox.Text = Url;
+        //}
 
         private void addressTextBox_Click(object sender, EventArgs e)
         {
@@ -182,6 +220,16 @@ namespace WebBrowser.UI
         private void goButton_Click(object sender, EventArgs e)
         {
             Navigate(addressTextBox.Text);
+        }
+
+        private void forwardButton_Click_1(object sender, EventArgs e)
+        {
+            webBrowser1.GoForward();
+        }
+
+        private void webBrowser1_StatusTextChanged(object sender, EventArgs e)
+        {
+            //toolstrip for status label updates here from dotnet tutorial
         }
     }
 }
