@@ -39,6 +39,7 @@ namespace WebBrowser.UI
         private void toolStripMenuItem2_Click(object sender, EventArgs e)
         {
             addNewTab();
+            //refactored this commend out to its own method to try to use for Ctrl-T as well.
 
             //tb.Controls.Add(buc);
             //var tabAdd = new BrowserUserControl();
@@ -48,7 +49,7 @@ namespace WebBrowser.UI
         private void BrowserUserControl_KeyDown(object sender, KeyEventArgs e)
         {
             //var keyAccess = new BrowserUserControl();
-
+            //mod4 lecture video code to add quick key functionality
             if (e.Control && (e.KeyCode == Keys.T))
             {
 
@@ -71,6 +72,7 @@ namespace WebBrowser.UI
 
             //this.tabControl1.TabPages.RemoveAt(this.Focused);
 
+            //remove tab functionality for menu item does not seem to work.
             this.tabControl1.TabPages.RemoveAt(this.tabControl1.SelectedIndex);
         }
 
@@ -81,13 +83,14 @@ namespace WebBrowser.UI
 
         private void UIMainFormControl_KeyDown(object sender, KeyEventArgs e)
         {
-
+            //code from Module 4 lecture videos.
             if (e.Control && (e.KeyCode == Keys.T))
             {
 
                 this.tabControl1.TabPages.Add(new TabPage("New Tab"));
             }
 
+            //following the lecture videos.
             if (e.Control && (e.KeyCode == Keys.W))
                 this.tabControl1.TabPages.RemoveAt(this.tabControl1.SelectedIndex);
         }
