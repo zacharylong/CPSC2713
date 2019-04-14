@@ -15,7 +15,7 @@ namespace WebBrowser.Logic
             //string itemDate = DateTime.Now.ToString("dddd, dd MMMM yyyy");
             //item.Date = DateTime.Parse(itemDate);
             //adapter.Insert(item.Title, item.URL, item.Date);
-            adapter.Insert(item.Id, item.Title, item.URL, item.Date);
+            adapter.Insert(item.Title, item.URL, item.Date);
         }
 
         public static List<HistoryItem> GetItems()

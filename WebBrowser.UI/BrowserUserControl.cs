@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WebBrowser.Logic;
+using System.Net.Http;
 
 namespace WebBrowser.UI
 {
@@ -174,6 +176,16 @@ namespace WebBrowser.UI
                 forwardButton.Enabled = true;
             }
             else forwardButton.Enabled = false;
+
+           
+            string title = ((HtmlDocument)webBrowser1.Document).Title;
+            var item = new HistoryItem();
+            item.Title = title;
+            item.URL = webBrowser1.Document.Url.ToString();
+            item.Date = DateTime.Now;
+
+            HistoryManager.AddItem(item);
+
         }
 
         private void addressTextBox_Click_1(object sender, EventArgs e)
@@ -230,6 +242,18 @@ namespace WebBrowser.UI
         private void webBrowser1_StatusTextChanged(object sender, EventArgs e)
         {
             //toolstrip for status label updates here from dotnet tutorial
+        }
+
+        private void bookmarkButton_Click(object sender, EventArgs e)
+        {
+            //url and title of current page added to the bookmark table in the database
+            //use bookmark manager
+            string title = ((HtmlDocument)webBrowser1.Document).Title;
+            var item = new BookmarkItem();
+            item.Title = title;
+            item.URL = webBrowser1.Document.Url.ToString();
+
+            BookmarkManager.AddItem(item);
         }
     }
 }
