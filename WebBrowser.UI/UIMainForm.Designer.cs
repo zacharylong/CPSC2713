@@ -170,9 +170,10 @@ namespace WebBrowser.UI
             // browserUserControl1
             // 
             this.browserUserControl1.AutoSize = true;
-            this.browserUserControl1.Location = new System.Drawing.Point(3, 6);
+            this.browserUserControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.browserUserControl1.Location = new System.Drawing.Point(3, 3);
             this.browserUserControl1.Name = "browserUserControl1";
-            this.browserUserControl1.Size = new System.Drawing.Size(621, 513);
+            this.browserUserControl1.Size = new System.Drawing.Size(900, 492);
             this.browserUserControl1.TabIndex = 0;
             // 
             // UIMainForm
