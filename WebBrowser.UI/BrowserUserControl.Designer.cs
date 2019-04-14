@@ -100,6 +100,7 @@
             this.addressTextBox.Name = "addressTextBox";
             this.addressTextBox.Size = new System.Drawing.Size(300, 25);
             this.addressTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.addressTextBox_KeyDown);
+            this.addressTextBox.Click += new System.EventHandler(this.addressTextBox_Click_2);
             // 
             // goButton
             // 
@@ -130,6 +131,8 @@
             this.webBrowser1.ScriptErrorsSuppressed = true;
             this.webBrowser1.Size = new System.Drawing.Size(800, 800);
             this.webBrowser1.TabIndex = 6;
+            this.webBrowser1.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.webBrowser1_DocumentCompleted_1);
+            this.webBrowser1.Navigated += new System.Windows.Forms.WebBrowserNavigatedEventHandler(this.webBrowser1_Navigated_1);
             // 
             // BrowserUserControl
             // 

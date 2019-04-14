@@ -34,7 +34,7 @@ namespace WebBrowser.UI
         {
             if (e.KeyCode == Keys.Enter)
             {
-                MessageBox.Show("Enter key pressed");
+                //MessageBox.Show("Enter key pressed");
                 Navigate(addressTextBox.Text);
             }
         }
@@ -42,12 +42,7 @@ namespace WebBrowser.UI
         private void webBrowser1_Navigated(object sender, 
             WebBrowserNavigatedEventArgs e)
         {
-            addressTextBox.Text = webBrowser1.Url.ToString();
-            addressTextBox.Text = webBrowser1.Document.Url.ToString();
-            if (addressTextBox.Text != e.Url.ToString())
-            {
-                addressTextBox.Text = e.Url.ToString();
-            }
+            
         }
 
         private void webBrowser1_CanGoBackChanged(object sender, EventArgs e)
@@ -186,13 +181,7 @@ namespace WebBrowser.UI
 
             
 
-            string title = ((HtmlDocument)webBrowser1.Document).Title;
-            var item = new HistoryItem();
-            item.Title = title;
-            item.URL = webBrowser1.Document.Url.ToString();
-            item.Date = DateTime.Now;
-
-            HistoryManager.AddItem(item);
+            
 
         }
 
@@ -263,6 +252,34 @@ namespace WebBrowser.UI
             item.URL = webBrowser1.Document.Url.ToString();
 
             BookmarkManager.AddItem(item);
+        }
+
+        private void webBrowser1_Navigated_1(object sender, WebBrowserNavigatedEventArgs e)
+        {
+            addressTextBox.Text = webBrowser1.Url.ToString();
+            addressTextBox.Text = webBrowser1.Document.Url.ToString();
+            if (addressTextBox.Text != e.Url.ToString())
+            {
+                addressTextBox.Text = e.Url.ToString();
+            }
+
+        }
+
+        private void webBrowser1_DocumentCompleted_1(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+            string title = ((HtmlDocument)webBrowser1.Document).Title;
+            var item = new HistoryItem();
+            item.Title = title;
+            item.URL = webBrowser1.Document.Url.ToString();
+            item.Date = DateTime.Now;
+
+            HistoryManager.AddItem(item);
+        }
+
+        private void addressTextBox_Click_2(object sender, EventArgs e)
+        {
+            addressTextBox.SelectionStart = 0;
+            addressTextBox.SelectionLength = addressTextBox.Text.Length;
         }
     }
 }
