@@ -34,6 +34,7 @@ namespace WebBrowser.UI
         {
             if (e.KeyCode == Keys.Enter)
             {
+                MessageBox.Show("Enter key pressed");
                 Navigate(addressTextBox.Text);
             }
         }
@@ -42,6 +43,11 @@ namespace WebBrowser.UI
             WebBrowserNavigatedEventArgs e)
         {
             addressTextBox.Text = webBrowser1.Url.ToString();
+            addressTextBox.Text = webBrowser1.Document.Url.ToString();
+            if (addressTextBox.Text != e.Url.ToString())
+            {
+                addressTextBox.Text = e.Url.ToString();
+            }
         }
 
         private void webBrowser1_CanGoBackChanged(object sender, EventArgs e)
@@ -65,6 +71,7 @@ namespace WebBrowser.UI
         {
             backButton.Enabled = false;
             forwardButton.Enabled = false;
+            
         }
 
         private void myBrowser()
@@ -177,7 +184,8 @@ namespace WebBrowser.UI
             }
             else forwardButton.Enabled = false;
 
-           
+            
+
             string title = ((HtmlDocument)webBrowser1.Document).Title;
             var item = new HistoryItem();
             item.Title = title;
@@ -232,6 +240,7 @@ namespace WebBrowser.UI
         private void goButton_Click(object sender, EventArgs e)
         {
             Navigate(addressTextBox.Text);
+
         }
 
         private void forwardButton_Click_1(object sender, EventArgs e)

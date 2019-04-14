@@ -99,6 +99,7 @@
             // 
             this.addressTextBox.Name = "addressTextBox";
             this.addressTextBox.Size = new System.Drawing.Size(300, 25);
+            this.addressTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.addressTextBox_KeyDown);
             // 
             // goButton
             // 
@@ -153,9 +154,9 @@
         private System.Windows.Forms.ToolStripButton forwardButton;
         private System.Windows.Forms.ToolStripButton refreshButton;
         private System.Windows.Forms.ToolStripButton homeButton;
-        public System.Windows.Forms.ToolStripTextBox addressTextBox;
         private System.Windows.Forms.ToolStripButton goButton;
         private System.Windows.Forms.ToolStripButton bookmarkButton;
         public System.Windows.Forms.WebBrowser webBrowser1;
+        public System.Windows.Forms.ToolStripTextBox addressTextBox;
     }
 }
