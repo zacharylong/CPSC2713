@@ -41,6 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BrowserDataSet.cs">
+      <DependentUpon>BrowserDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="BrowserDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
