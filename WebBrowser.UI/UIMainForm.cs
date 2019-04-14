@@ -103,6 +103,18 @@ namespace WebBrowser.UI
             myTabPage.Controls.Add(browserControl);
             this.tabControl1.TabPages.Add(myTabPage);
         }
+
+        private void manageHistoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var historyManager = new History_Manager_Form();
+            historyManager.ShowDialog();
+        }
+
+        private void manageBookmarksToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var bookmarkManager = new Bookmark_Manager_Form();
+            bookmarkManager.ShowDialog();
+        }
     }
 }
 
