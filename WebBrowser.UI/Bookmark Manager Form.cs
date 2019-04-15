@@ -25,7 +25,7 @@ namespace WebBrowser.UI
 
             foreach(var item in items)
             {
-                listBoxBookmark.Items.Add(string.Format("{0} - {1}", item.Title, item.URL));
+                listBoxBookmark.Items.Add(string.Format("{0} ({1})", item.Title, item.URL));
             }
         }
     }

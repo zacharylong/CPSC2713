@@ -256,8 +256,8 @@ namespace WebBrowser.UI
 
         private void webBrowser1_Navigated_1(object sender, WebBrowserNavigatedEventArgs e)
         {
-            addressTextBox.Text = webBrowser1.Url.ToString();
-            addressTextBox.Text = webBrowser1.Document.Url.ToString();
+            //addressTextBox.Text = webBrowser1.Url.ToString();
+            //addressTextBox.Text = webBrowser1.Document.Url.ToString();
             if (addressTextBox.Text != e.Url.ToString())
             {
                 addressTextBox.Text = e.Url.ToString();
